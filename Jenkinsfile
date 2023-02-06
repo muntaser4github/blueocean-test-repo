@@ -7,10 +7,10 @@ pipeline {
       }
     }
 
-    stage('Build') {
-      agent any
+    stage('Package') {
       steps {
-        sh 'mvn compile'
+        sh 'mvn package'
+        sh 'mvn package'
       }
     }
 
